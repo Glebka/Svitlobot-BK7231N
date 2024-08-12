@@ -50,7 +50,7 @@ void loop()
     Serial.print("[HTTP] begin...\n");
     if (http.begin(SVITLOBOT_HOST, SVITLOBOT_PORT, SVITLOBOT_URI SVITLOBOT_KEY))
     { // HTTPS
-        Serial.print("[HTTP] GET " SVITLOBOT_API SVITLOBOT_KEY "\n");
+        Serial.print("[HTTP] GET " SVITLOBOT_HOST SVITLOBOT_URI SVITLOBOT_KEY "\n");
         // start connection and send HTTP header
         int httpCode = http.GET();
 
